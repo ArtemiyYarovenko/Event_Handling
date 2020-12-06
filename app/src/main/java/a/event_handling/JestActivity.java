@@ -23,7 +23,7 @@ public class JestActivity extends AppCompatActivity
         setContentView(R.layout.activity_jest);
 
         ConstraintLayout myLayout = findViewById(R.id.jest_layout);
-        gestureText = findViewById(R.id.textView);
+        gestureText = findViewById(R.id.jest_text_view);
 
         this.gDetector = new GestureDetectorCompat(this,this);
         gDetector.setOnDoubleTapListener(this);
