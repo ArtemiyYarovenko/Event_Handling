@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GestureDetectorCompat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -115,7 +116,8 @@ public class MainActivity extends AppCompatActivity
         TextView headerView = (TextView) findViewById(R.id.textView);
         switch(id){
             case R.id.button_action :
-                headerView.setText("кнопка");
+                Intent intent = new Intent(this, ButtonActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.xy_action:
                 headerView.setText("координаты");
