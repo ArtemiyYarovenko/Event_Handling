@@ -5,6 +5,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GestureDetectorCompat;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -98,6 +100,31 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        TextView headerView = (TextView) findViewById(R.id.textView);
+        switch(id){
+            case R.id.button_action :
+                headerView.setText("кнопка");
+                return true;
+            case R.id.xy_action:
+                headerView.setText("координаты");
+                return true;
+            case R.id.jest_action:
+                headerView.setText("жесты");
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
