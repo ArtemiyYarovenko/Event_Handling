@@ -1,6 +1,7 @@
 package a.event_handling;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GestureDetectorCompat;
 
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class JestActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jest);
+
+        ConstraintLayout myLayout = findViewById(R.id.jest_layout);
         gestureText = findViewById(R.id.textView);
 
         this.gDetector = new GestureDetectorCompat(this,this);
