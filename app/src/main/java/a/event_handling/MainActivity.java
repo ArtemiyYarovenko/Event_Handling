@@ -23,5 +23,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        button.setOnLongClickListener(
+                new Button.OnLongClickListener() {
+                    public boolean onLongClick(View v) {
+                        TextView statusText =
+                                findViewById(R.id.textView);
+                        statusText.setText("Long button click");
+                        return true;
+                    }
+                }
+        );
+
     }
 }
