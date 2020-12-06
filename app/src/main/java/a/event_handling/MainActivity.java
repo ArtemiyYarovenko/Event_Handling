@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         ConstraintLayout myLayout = findViewById(R.id.activity_main);
-        Button button = findViewById(R.id.button);
+
         gestureText = findViewById(R.id.textView);
         this.gDetector = new GestureDetectorCompat(this,this);
         gDetector.setOnDoubleTapListener(this);
@@ -85,21 +85,6 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-
-        button.setOnClickListener(new Button.OnClickListener() {
-            public void onClick(View v) {
-                TextView statusText =  findViewById(R.id.textView);
-                statusText.setText("Button clicked");
-            }
-        });
-
-        button.setOnLongClickListener(new Button.OnLongClickListener() {
-            public boolean onLongClick(View v) {
-                TextView statusText = findViewById(R.id.textView);
-                statusText.setText("Long button click");
-                return true;
-            }
-        });
 
     }
 
